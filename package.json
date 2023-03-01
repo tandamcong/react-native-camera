@@ -1,36 +1,16 @@
 {
-  "_from": "react-native-camera-tandc@^1.0.0",
-  "_id": "react-native-camera-tandc@1.0.0",
-  "_inBundle": false,
-  "_integrity": "sha512-+Vkql24PFYQfsPRznJCvPwJQfyzCnjlcww/iZ4Ej80bgivKjL9eU0IMQIXp4yi6XCrKi4voWXxIDPMupQZKeIQ==",
-  "_location": "/react-native-camera-tandc",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "react-native-camera-tandc@^1.0.0",
-    "name": "react-native-camera-tandc",
-    "escapedName": "react-native-camera-tandc",
-    "rawSpec": "^1.0.0",
-    "saveSpec": null,
-    "fetchSpec": "^1.0.0"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_shasum": "caf74081f055e89d7e9b0cd5108965d808c60e90",
-  "_spec": "react-native-camera-tandc@^1.0.0",
-  "bundleDependencies": false,
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/prompt"
-    }
+  "name": "react-native-camera",
+  "description": "A Camera component for React Native. Also reads barcodes.",
+  "version": "4.2.1",
+  "author": "Lochlan Wansbrough <lochie@live.com> (http://lwansbrough.com)",
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/react-native-camera",
+    "logo": "https://opencollective.com/opencollective/logo.txt"
   },
   "dependencies": {
     "prop-types": "^15.6.2"
   },
-  "deprecated": false,
-  "description": "A Camera component for React Native. Also reads barcodes.",
   "devDependencies": {
     "@babel/runtime": "^7.3.1",
     "@commitlint/cli": "^9.1.2",
@@ -44,7 +24,7 @@
     "@types/react": "^16.8.3",
     "@types/react-native": "^0.63.13",
     "babel-eslint": "^10.1.0",
-    "commitizen": "^1.0.0",
+    "commitizen": "^4.2.1",
     "eslint": "^7.8.0",
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-import": "^2.13.0",
@@ -58,6 +38,7 @@
     "react-native": "0.63.2",
     "semantic-release": "^17.1.1"
   },
+  "homepage": "https://github.com/react-native-community/react-native-camera",
   "keywords": [
     "barcode",
     "camera",
@@ -84,9 +65,21 @@
     ]
   },
   "main": "src/index.js",
-  "name": "react-native-camera-tandc",
   "nativePackage": true,
   "pre-commit": "lint:staged",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-native-community/react-native-camera.git"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "lint": "eslint src --max-warnings=0",
+    "lint:staged": "lint-staged",
+    "prettier": "prettier --write",
+    "ci:publish": "semantic-release"
+  },
+  "types": "types/index.d.ts",
   "release": {
     "plugins": [
       "@semantic-release/commit-analyzer",
@@ -110,18 +103,9 @@
       ]
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tandamcong/react-native-camera.git"
-  },
-  "scripts": {
-    "ci:publish": "semantic-release",
-    "commit": "git-cz",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
-    "lint": "eslint src --max-warnings=0",
-    "lint:staged": "lint-staged",
-    "prettier": "prettier --write"
-  },
-  "types": "types/index.d.ts",
-  "version": "1.0.0"
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/prompt"
+    }
+  }
 }
